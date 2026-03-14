@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Будильник</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="pageHeader">
+      <h1 class="pageTitle">Будильник</h1>
+      <a class="backLink" href="index.html">На главную</a>
+    </header>
+
+    <section class="panel">
+      <div class="formRow">
+        <input class="input" id="alarmTime" type="time" />
+        <button class="primaryBtn" id="setAlarm">Завести</button>
+        <button class="secondaryBtn" id="clearAlarm">Сбросить</button>
+      </div>
+      <div class="statusLine" id="alarmStatus"></div>
+    </section>
+  </main>
+
+  <div class="modalOverlay" id="alarmModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modalTitle">Будильник</div>
+      <div class="modalText">Чтобы отключить будильник, решите несколько примеров.</div>
+      <div class="taskLine">
+        <div class="taskExpr" id="taskExpr"></div>
+        <input class="input taskInput" id="taskAnswer" inputmode="numeric" />
+        <button class="primaryBtn" id="taskSubmit">Ответить</button>
+      </div>
+      <div class="hint" id="taskHint"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

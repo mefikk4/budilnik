@@ -1,0 +1,216 @@
+:root{
+  --bg:#f2f2f2;
+  --card:#f7f7f7;
+  --cardInner:#ffffff;
+  --shadow:0 10px 18px rgba(0,0,0,.18);
+  --shadowSoft:0 12px 24px rgba(0,0,0,.14);
+  --radius:18px;
+  --purple:#5B4AA3;
+  --text:#1f1f1f;
+  --muted:#3b3b3b;
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);
+}
+
+.shell{
+  max-width:1000px;
+  margin:0 auto;
+  padding:26px 28px 36px;
+}
+
+.card{
+  display:flex;
+  gap:32px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadowSoft);
+  padding:22px 26px;
+  border:1px solid rgba(0,0,0,.05);
+}
+
+.card + .card{margin-top:34px}
+
+.card--short{min-height:260px}
+
+.card__iconWrap{width:260px;flex:0 0 260px;display:flex;align-items:center;justify-content:center}
+
+.card__iconBg{
+  width:240px;
+  height:240px;
+  border-radius:22px;
+  background:var(--cardInner);
+  box-shadow:0 8px 14px rgba(0,0,0,.16);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icon{display:block}
+
+.card__content{flex:1; padding-top:10px}
+
+.card__title{
+  margin:6px 0 14px;
+  font-size:30px;
+  line-height:1.15;
+  font-weight:700;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--purple);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  box-shadow:0 8px 14px rgba(91,74,163,.25);
+}
+
+.btn:active{transform:translateY(1px)}
+
+.card__lead{
+  margin:26px 0 0;
+  font-size:14px;
+  font-weight:700;
+  color:var(--text);
+}
+
+.card__sub{
+  margin:28px 0 0;
+  font-size:13px;
+  font-weight:600;
+  color:var(--muted);
+}
+
+.pageHeader{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:0 0 18px;
+}
+
+.pageTitle{
+  font-size:28px;
+  font-weight:700;
+  margin:0;
+}
+
+.backLink{
+  color:var(--purple);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.panel{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadowSoft);
+  padding:22px 26px;
+  border:1px solid rgba(0,0,0,.05);
+}
+
+.formRow{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+
+.input{
+  height:44px;
+  padding:0 14px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.15);
+  background:#fff;
+  font:inherit;
+}
+
+.primaryBtn{
+  height:44px;
+  border:0;
+  border-radius:14px;
+  padding:0 18px;
+  background:var(--purple);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.secondaryBtn{
+  height:44px;
+  border:1px solid rgba(0,0,0,.15);
+  border-radius:14px;
+  padding:0 18px;
+  background:#fff;
+  color:var(--text);
+  font-weight:700;
+  cursor:pointer;
+}
+
+.statusLine{margin:16px 0 0; font-weight:600}
+
+.modalOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.modalOverlay.isOpen{display:flex}
+
+.modal{
+  width:min(520px, 100%);
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(0,0,0,.32);
+  padding:20px 22px;
+}
+
+.modalTitle{margin:0 0 10px; font-size:20px; font-weight:800}
+.modalText{margin:0 0 14px; font-weight:600}
+
+.taskLine{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+
+.taskExpr{
+  font-size:22px;
+  font-weight:800;
+}
+
+.taskInput{width:140px}
+
+.hint{margin:12px 0 0; color:rgba(0,0,0,.65); font-weight:600}
+
+.clockFace{
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  margin:18px auto 0;
+  background:radial-gradient(circle at 35% 30%, #ffffff, #eaf7ff 55%, #d9f1ff);
+  border:18px solid #F2A63A;
+  box-shadow:0 14px 28px rgba(0,0,0,.18);
+  position:relative;
+}
+
+.hand{position:absolute; left:50%; top:50%; transform-origin:0% 50%;}
+
+.hand--hour{height:10px; width:90px; background:#2E5B78; border-radius:10px; transform:translateY(-50%) rotate(0deg)}
+.hand--min{height:8px; width:120px; background:#2E5B78; border-radius:10px; transform:translateY(-50%) rotate(0deg)}
+.hand--sec{height:6px; width:140px; background:#E04B4B; border-radius:10px; transform:translateY(-50%) rotate(0deg)}
+
+.pivot{position:absolute; left:50%; top:50%; width:16px; height:16px; background:#2E5B78; border-radius:50%; transform:translate(-50%,-50%)}
+
+.digital{
+  text-align:center;
+  font-size:44px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin:8px 0 0;
+}

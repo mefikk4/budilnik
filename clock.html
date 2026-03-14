@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Часы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="pageHeader">
+      <h1 class="pageTitle">Часы</h1>
+      <a class="backLink" href="index.html">На главную</a>
+    </header>
+
+    <section class="panel">
+      <div class="digital" id="digitalClock">--:--:--</div>
+      <div class="clockFace" aria-hidden="true">
+        <div class="hand hand--hour" id="hHand"></div>
+        <div class="hand hand--min" id="mHand"></div>
+        <div class="hand hand--sec" id="sHand"></div>
+        <div class="pivot"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Будильник и часы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <div class="card__iconWrap">
+        <div class="card__iconBg">
+          <svg class="icon icon--alarm" width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M68 30C55 20 42 16 28 22" stroke="#FFB84D" stroke-width="10" stroke-linecap="round"/>
+            <path d="M152 30C165 20 178 16 192 22" stroke="#FFB84D" stroke-width="10" stroke-linecap="round"/>
+            <path d="M110 60C72 60 42 90 42 128C42 166 72 196 110 196C148 196 178 166 178 128C178 90 148 60 110 60Z" stroke="#FFB84D" stroke-width="10"/>
+            <path d="M110 86V128" stroke="#FF6A4D" stroke-width="10" stroke-linecap="round"/>
+            <path d="M110 128H140" stroke="#FF6A4D" stroke-width="10" stroke-linecap="round"/>
+            <path d="M68 196L52 212" stroke="#FFB84D" stroke-width="10" stroke-linecap="round"/>
+            <path d="M152 196L168 212" stroke="#FFB84D" stroke-width="10" stroke-linecap="round"/>
+            <path d="M96 44H124" stroke="#FFB84D" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="card__content">
+        <h2 class="card__title">Режим будильника</h2>
+        <a class="btn" href="alarm.html">Перейти</a>
+        <p class="card__lead">Заведите будильник чтобы не пропустить что-то важное!</p>
+        <p class="card__sub">Вы можете завести будильник чтобы не проспать</p>
+      </div>
+    </section>
+
+    <section class="card card--short">
+      <div class="card__iconWrap">
+        <div class="card__iconBg">
+          <svg class="icon icon--clock" width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="110" cy="110" r="92" fill="#F2A63A"/>
+            <circle cx="110" cy="110" r="76" fill="#DFF5FF"/>
+            <circle cx="110" cy="110" r="70" fill="#FFFFFF"/>
+            <circle cx="110" cy="110" r="8" fill="#2E5B78"/>
+            <path d="M110 110V62" stroke="#2E5B78" stroke-width="10" stroke-linecap="round"/>
+            <path d="M110 110H150" stroke="#2E5B78" stroke-width="10" stroke-linecap="round"/>
+            <path d="M110 110L138 126" stroke="#E04B4B" stroke-width="8" stroke-linecap="round"/>
+            <path d="M110 46V54" stroke="#2E5B78" stroke-width="8" stroke-linecap="round"/>
+            <path d="M110 166V174" stroke="#2E5B78" stroke-width="8" stroke-linecap="round"/>
+            <path d="M46 110H54" stroke="#2E5B78" stroke-width="8" stroke-linecap="round"/>
+            <path d="M166 110H174" stroke="#2E5B78" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="card__content">
+        <h2 class="card__title">Режим часов</h2>
+        <a class="btn" href="clock.html">Перейти</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
